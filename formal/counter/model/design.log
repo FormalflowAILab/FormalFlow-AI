@@ -1,0 +1,231 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60+78 (git sha1 156752695, clang++ 18.1.8 -fPIC -O3)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: counter.sv
+Parsing SystemVerilog input from `counter.sv' to AST representation.
+verilog frontend filename counter.sv
+Generating RTLIL representation for module `\counter'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \counter
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \counter
+Removed 0 unused modules.
+Module counter directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$counter.sv:35$4 in module counter.
+Marked 2 switch rules as full_case in process $proc$counter.sv:13$1 in module counter.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 3 redundant assignments.
+Promoted 1 assignment to connection.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\counter.$proc$counter.sv:33$14'.
+  Set init value: \started = 1'0
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~5 debug messages>
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\counter.$proc$counter.sv:33$14'.
+Creating decoders for process `\counter.$proc$counter.sv:46$5'.
+     1/2: $assert$counter.sv:53$12_EN
+     2/2: $assert$counter.sv:49$6_EN
+Creating decoders for process `\counter.$proc$counter.sv:35$4'.
+     1/2: $0\started[0:0]
+     2/2: $0\prev_count[3:0]
+Creating decoders for process `\counter.$proc$counter.sv:13$1'.
+     1/1: $0\count[3:0]
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\counter.\prev_count' using process `\counter.$proc$counter.sv:35$4'.
+  created $dff cell `$procdff$33' with positive edge clock.
+Creating register for signal `\counter.\started' using process `\counter.$proc$counter.sv:35$4'.
+  created $dff cell `$procdff$34' with positive edge clock.
+Creating register for signal `\counter.\count' using process `\counter.$proc$counter.sv:13$1'.
+  created $dff cell `$procdff$35' with positive edge clock.
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `counter.$proc$counter.sv:33$14'.
+Found and cleaned up 2 empty switches in `\counter.$proc$counter.sv:46$5'.
+Removing empty process `counter.$proc$counter.sv:46$5'.
+Found and cleaned up 1 empty switch in `\counter.$proc$counter.sv:35$4'.
+Removing empty process `counter.$proc$counter.sv:35$4'.
+Found and cleaned up 2 empty switches in `\counter.$proc$counter.sv:13$1'.
+Removing empty process `counter.$proc$counter.sv:13$1'.
+Cleaned up 5 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.3. Executing FUTURE pass.
+
+2.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 0 unused cells and 13 unused wires.
+<suppressed ~1 debug messages>
+
+2.6. Executing CHECK pass (checking for obvious problems).
+Checking module counter...
+Found and reported 0 problems.
+
+2.7. Executing OPT pass (performing simple optimizations).
+
+2.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+2.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+2.7.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+2.7.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.7.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.14. Finished fast OPT passes. (There is nothing left to do.)
+
+2.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell counter.$add$counter.sv:22$3 ($add).
+Removed top 28 bits (of 32) from port Y of cell counter.$add$counter.sv:22$3 ($add).
+Removed top 28 bits (of 32) from wire counter.$add$counter.sv:22$3_Y.
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.11.4. Finished fast OPT passes.
+
+2.12. Printing statistics.
+
+=== counter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       19 wires
+       40 wire bits
+        5 public wires
+       11 public wire bits
+        3 ports
+        6 port bits
+       19 cells
+        2   $add
+        2   $check
+        3   $dff
+        4   $eq
+        1   $logic_or
+        7   $mux
+
+2.13. Executing CHECK pass (checking for obvious problems).
+Checking module counter...
+Found and reported 0 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `counter'. Setting top module to counter.
+
+3.1. Analyzing design hierarchy..
+Top module:  \counter
+
+3.2. Analyzing design hierarchy..
+Top module:  \counter
+Removed 0 unused modules.
+Module counter directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: f87b0b698f, CPU: user 0.03s system 0.01s, MEM: 14.37 MB peak
+Yosys 0.60+78 (git sha1 156752695, clang++ 18.1.8 -fPIC -O3)
+Time spent: 29% 6x opt_expr (0 sec), 25% 5x opt_clean (0 sec), ...

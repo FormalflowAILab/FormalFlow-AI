@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-02-10T13:42:27" hostname="deepak-Zenbook-UX3402ZA-UX3402ZA" package="counter" id="0" name="default" tests="2" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property ASSERT in counter at counter.sv:49.17-49.80" time="0" type="ASSERT" location="counter.sv:49.17-49.80" id="_witness_.check_assert_counter_sv_49_6">
+</testcase>
+<testcase classname="default" name="Property ASSERT in counter at counter.sv:53.21-53.45" time="0" type="ASSERT" location="counter.sv:53.21-53.45" id="_witness_.check_assert_counter_sv_53_12">
+</testcase>
+<system-out>SBY 13:42:27 [formal/counter] Removing directory '/home/deepak/FormalFlowAi/formal/counter'.
+SBY 13:42:27 [formal/counter] Copy '/home/deepak/FormalFlowAi/src/counter.sv' to '/home/deepak/FormalFlowAi/formal/counter/src/counter.sv'.
+SBY 13:42:27 [formal/counter] engine_0: smtbmc
+SBY 13:42:27 [formal/counter] base: starting process &quot;cd formal/counter/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 13:42:27 [formal/counter] base: finished (returncode=0)
+SBY 13:42:27 [formal/counter] prep: starting process &quot;cd formal/counter/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 13:42:27 [formal/counter] prep: finished (returncode=0)
+SBY 13:42:27 [formal/counter] smt2: starting process &quot;cd formal/counter/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 13:42:27 [formal/counter] smt2: finished (returncode=0)
+SBY 13:42:27 [formal/counter] engine_0: starting process &quot;cd formal/counter; yosys-smtbmc --presat --unroll --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Solver: yices
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Status: passed
+SBY 13:42:27 [formal/counter] engine_0: finished (returncode=0)
+SBY 13:42:27 [formal/counter] engine_0: Status returned by engine: pass
+SBY 13:42:27 [formal/counter] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:42:27 [formal/counter] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:42:27 [formal/counter] summary: engine_0 (smtbmc) returned pass
+SBY 13:42:27 [formal/counter] summary: engine_0 did not produce any traces
+SBY 13:42:27 [formal/counter] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>
