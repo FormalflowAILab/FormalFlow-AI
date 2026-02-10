@@ -1,6 +1,13 @@
-[script]
-read -formal counter.sv
-prep -top counter
+[options]
+mode bmc
+depth 20
+
+[engines]
+smtbmc
 
 [files]
 src/counter.sv
+
+[script]
+read_verilog -sv -D FORMAL counter.sv
+prep -top counter
