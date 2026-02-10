@@ -1,0 +1,6 @@
+[script]
+read -formal counter.sv
+prep -top counter
+
+[files]
+src/counter.sv
