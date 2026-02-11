@@ -30,6 +30,8 @@ module counter (
         // Logic to track the previous state and indicate startup
         reg [3:0] prev_count;
         reg started;
+        // Cycle counter for temporal covers
+        reg [5:0] cycles_since_start;
         initial started = 0;
 
         always @(posedge clk) begin
@@ -39,6 +41,8 @@ module counter (
             end else begin
                 prev_count <= count;
                 started <= 1;
+                if (cycles_since_start < 6'd63)
+                    cycles_since_start <= cycles_since_start + 1'b1;
             end
         end
 
@@ -51,6 +55,38 @@ module counter (
                 // If previous was 14, current must be 15.
                 if (prev_count == 4'd14)
                     assert( count == 4'd15 );
+
+                // --- Cover properties ---
+                // Reachability: counter hits each value 0..15 after start
+                cover (started && count == 4'd0);
+                cover (started && count == 4'd1);
+                cover (started && count == 4'd2);
+                cover (started && count == 4'd3);
+                cover (started && count == 4'd4);
+                cover (started && count == 4'd5);
+                cover (started && count == 4'd6);
+                cover (started && count == 4'd7);
+                cover (started && count == 4'd8);
+                cover (started && count == 4'd9);
+                cover (started && count == 4'd10);
+                cover (started && count == 4'd11);
+                cover (started && count == 4'd12);
+                cover (started && count == 4'd13);
+                cover (started && count == 4'd14);
+                cover (started && count == 4'd15);
+
+                // Wrap-around and transition covers
+                cover (started && prev_count == 4'd15 && count == 4'd0);
+                cover (started && prev_count == 4'd14 && count == 4'd15);
+
+                // Bug-detection cover (if the counter erroneously wraps at 14)
+                cover (started && prev_count == 4'd14 && count == 4'd0);
+
+                // Reset-related covers
+                cover (rst && count == 4'd0);
+
+                // Temporal cover: reach 15 within 16 cycles after start
+                cover (started && cycles_since_start <= 6'd16 && count == 4'd15);
             end
         end
 

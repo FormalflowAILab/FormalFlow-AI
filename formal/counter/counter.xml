@@ -1,76 +1,270 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-<testsuite timestamp="2026-02-10T13:42:27" hostname="deepak-Zenbook-UX3402ZA-UX3402ZA" package="counter" id="0" name="default" tests="2" errors="0" failures="0" time="0" skipped="0">
+<testsuite timestamp="2026-02-11T14:52:03" hostname="deepak-Zenbook-UX3402ZA-UX3402ZA" package="counter" id="0" name="default" tests="23" errors="0" failures="2" time="0" skipped="2">
 <properties>
 <property name="os" value="Linux"/>
 <property name="expect" value="PASS"/>
-<property name="status" value="PASS"/>
+<property name="status" value="FAIL"/>
 </properties>
 <testcase classname="default" name="build execution" time="0">
+<failure type="FAIL" message="Task returned status FAIL." />
 </testcase>
-<testcase classname="default" name="Property ASSERT in counter at counter.sv:49.17-49.80" time="0" type="ASSERT" location="counter.sv:49.17-49.80" id="_witness_.check_assert_counter_sv_49_6">
+<testcase classname="default" name="Property ASSERT in counter at counter.sv:53.17-53.80" time="0" type="ASSERT" location="counter.sv:53.17-53.80" id="_witness_.check_assert_counter_sv_53_8">
+<skipped />
 </testcase>
-<testcase classname="default" name="Property ASSERT in counter at counter.sv:53.21-53.45" time="0" type="ASSERT" location="counter.sv:53.21-53.45" id="_witness_.check_assert_counter_sv_53_12">
+<testcase classname="default" name="Property ASSERT in counter at counter.sv:57.21-57.45" time="0" type="ASSERT" location="counter.sv:57.21-57.45" id="_witness_.check_assert_counter_sv_57_14">
+<skipped />
 </testcase>
-<system-out>SBY 13:42:27 [formal/counter] Removing directory '/home/deepak/FormalFlowAi/formal/counter'.
-SBY 13:42:27 [formal/counter] Copy '/home/deepak/FormalFlowAi/src/counter.sv' to '/home/deepak/FormalFlowAi/formal/counter/src/counter.sv'.
-SBY 13:42:27 [formal/counter] engine_0: smtbmc
-SBY 13:42:27 [formal/counter] base: starting process &quot;cd formal/counter/src; yosys -ql ../model/design.log ../model/design.ys&quot;
-SBY 13:42:27 [formal/counter] base: finished (returncode=0)
-SBY 13:42:27 [formal/counter] prep: starting process &quot;cd formal/counter/model; yosys -ql design_prep.log design_prep.ys&quot;
-SBY 13:42:27 [formal/counter] prep: finished (returncode=0)
-SBY 13:42:27 [formal/counter] smt2: starting process &quot;cd formal/counter/model; yosys -ql design_smt2.log design_smt2.ys&quot;
-SBY 13:42:27 [formal/counter] smt2: finished (returncode=0)
-SBY 13:42:27 [formal/counter] engine_0: starting process &quot;cd formal/counter; yosys-smtbmc --presat --unroll --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Solver: yices
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 0..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 0..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 1..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 1..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 2..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 2..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 3..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 3..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 4..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 4..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 5..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 5..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 6..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 6..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 7..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 7..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 8..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 8..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 9..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 9..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 10..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 10..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 11..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 11..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 12..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 12..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 13..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 13..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 14..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 14..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 15..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 15..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 16..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 16..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 17..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 17..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 18..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 18..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assumptions in step 19..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Checking assertions in step 19..
-SBY 13:42:27 [formal/counter] engine_0: ##   0:00:00  Status: passed
-SBY 13:42:27 [formal/counter] engine_0: finished (returncode=0)
-SBY 13:42:27 [formal/counter] engine_0: Status returned by engine: pass
-SBY 13:42:27 [formal/counter] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY 13:42:27 [formal/counter] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY 13:42:27 [formal/counter] summary: engine_0 (smtbmc) returned pass
-SBY 13:42:27 [formal/counter] summary: engine_0 did not produce any traces
-SBY 13:42:27 [formal/counter] DONE (PASS, rc=0)
+<testcase classname="default" name="Property COVER in counter at counter.sv:61.17-61.49" time="0" type="COVER" location="counter.sv:61.17-61.49" id="_witness_.check_cover_counter_sv_61_16" tracefile="engine_0/trace16.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:62.17-62.49" time="0" type="COVER" location="counter.sv:62.17-62.49" id="_witness_.check_cover_counter_sv_62_19" tracefile="engine_0/trace7.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:63.17-63.49" time="0" type="COVER" location="counter.sv:63.17-63.49" id="_witness_.check_cover_counter_sv_63_22" tracefile="engine_0/trace3.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:64.17-64.49" time="0" type="COVER" location="counter.sv:64.17-64.49" id="_witness_.check_cover_counter_sv_64_25" tracefile="engine_0/trace8.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:65.17-65.49" time="0" type="COVER" location="counter.sv:65.17-65.49" id="_witness_.check_cover_counter_sv_65_28" tracefile="engine_0/trace2.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:66.17-66.49" time="0" type="COVER" location="counter.sv:66.17-66.49" id="_witness_.check_cover_counter_sv_66_31" tracefile="engine_0/trace9.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:67.17-67.49" time="0" type="COVER" location="counter.sv:67.17-67.49" id="_witness_.check_cover_counter_sv_67_34" tracefile="engine_0/trace4.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:68.17-68.49" time="0" type="COVER" location="counter.sv:68.17-68.49" id="_witness_.check_cover_counter_sv_68_37" tracefile="engine_0/trace10.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:69.17-69.49" time="0" type="COVER" location="counter.sv:69.17-69.49" id="_witness_.check_cover_counter_sv_69_40" tracefile="engine_0/trace0.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:70.17-70.49" time="0" type="COVER" location="counter.sv:70.17-70.49" id="_witness_.check_cover_counter_sv_70_43" tracefile="engine_0/trace11.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:71.17-71.50" time="0" type="COVER" location="counter.sv:71.17-71.50" id="_witness_.check_cover_counter_sv_71_46" tracefile="engine_0/trace5.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:72.17-72.50" time="0" type="COVER" location="counter.sv:72.17-72.50" id="_witness_.check_cover_counter_sv_72_49" tracefile="engine_0/trace12.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:73.17-73.50" time="0" type="COVER" location="counter.sv:73.17-73.50" id="_witness_.check_cover_counter_sv_73_52" tracefile="engine_0/trace1.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:74.17-74.50" time="0" type="COVER" location="counter.sv:74.17-74.50" id="_witness_.check_cover_counter_sv_74_55" tracefile="engine_0/trace13.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:75.17-75.50" time="0" type="COVER" location="counter.sv:75.17-75.50" id="_witness_.check_cover_counter_sv_75_58" tracefile="engine_0/trace6.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:76.17-76.50" time="0" type="COVER" location="counter.sv:76.17-76.50" id="_witness_.check_cover_counter_sv_76_61" tracefile="engine_0/trace14.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:79.17-79.72" time="0" type="COVER" location="counter.sv:79.17-79.72" id="_witness_.check_cover_counter_sv_79_64" tracefile="engine_0/trace16.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:80.17-80.73" time="0" type="COVER" location="counter.sv:80.17-80.73" id="_witness_.check_cover_counter_sv_80_69" tracefile="engine_0/trace14.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:83.17-83.72" time="0" type="COVER" location="counter.sv:83.17-83.72" id="_witness_.check_cover_counter_sv_83_74">
+<failure type="COVER" message="Property COVER in counter at counter.sv:83.17-83.72 failed." />
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:86.17-86.45" time="0" type="COVER" location="counter.sv:86.17-86.45" id="_witness_.check_cover_counter_sv_86_79" tracefile="engine_0/trace17.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in counter at counter.sv:89.17-89.81" time="0" type="COVER" location="counter.sv:89.17-89.81" id="_witness_.check_cover_counter_sv_89_82" tracefile="engine_0/trace15.vcd">
+</testcase>
+<system-out>SBY 14:52:03 [formal/counter] Removing directory '/home/deepak/FormalFlowAi/formal/counter'.
+SBY 14:52:03 [formal/counter] Copy '/home/deepak/FormalFlowAi/src/counter.sv' to '/home/deepak/FormalFlowAi/formal/counter/src/counter.sv'.
+SBY 14:52:03 [formal/counter] engine_0: smtbmc
+SBY 14:52:03 [formal/counter] base: starting process &quot;cd formal/counter/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 14:52:03 [formal/counter] base: finished (returncode=0)
+SBY 14:52:03 [formal/counter] prep: starting process &quot;cd formal/counter/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 14:52:03 [formal/counter] prep: finished (returncode=0)
+SBY 14:52:03 [formal/counter] smt2: starting process &quot;cd formal/counter/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 14:52:03 [formal/counter] smt2: finished (returncode=0)
+SBY 14:52:03 [formal/counter] engine_0: starting process &quot;cd formal/counter; yosys-smtbmc --presat --unroll -c --noprogress -t 64  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Solver: yices
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:69.17-69.49 (_witness_.check_cover_counter_sv_69_40)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:73.17-73.50 (_witness_.check_cover_counter_sv_73_52)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:65.17-65.49 (_witness_.check_cover_counter_sv_65_28)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:63.17-63.49 (_witness_.check_cover_counter_sv_63_22)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:67.17-67.49 (_witness_.check_cover_counter_sv_67_34)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:71.17-71.50 (_witness_.check_cover_counter_sv_71_46)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace5.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace5.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace5.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:75.17-75.50 (_witness_.check_cover_counter_sv_75_58)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace6.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace6.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace6.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:62.17-62.49 (_witness_.check_cover_counter_sv_62_19)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace7.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace7.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace7.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:64.17-64.49 (_witness_.check_cover_counter_sv_64_25)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace8.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace8_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace8.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace8.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:66.17-66.49 (_witness_.check_cover_counter_sv_66_31)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace9.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace9_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace9.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace9.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:68.17-68.49 (_witness_.check_cover_counter_sv_68_37)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace10.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace10_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace10.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace10.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:70.17-70.49 (_witness_.check_cover_counter_sv_70_43)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace11.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace11_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace11.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace11.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:72.17-72.50 (_witness_.check_cover_counter_sv_72_49)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace12.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace12_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace12.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace12.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:74.17-74.50 (_witness_.check_cover_counter_sv_74_55)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace13.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace13_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace13.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace13.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:76.17-76.50 (_witness_.check_cover_counter_sv_76_61)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:80.17-80.73 (_witness_.check_cover_counter_sv_80_69)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace14.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace14_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace14.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace14.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:89.17-89.81 (_witness_.check_cover_counter_sv_89_82)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace15.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace15_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace15.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace15.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:61.17-61.49 (_witness_.check_cover_counter_sv_61_16)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:79.17-79.72 (_witness_.check_cover_counter_sv_79_64)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace16.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace16_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace16.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace16.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Reached cover statement in step 2 at counter: counter.sv:86.17-86.45 (_witness_.check_cover_counter_sv_86_79)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace17.vcd
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace17_tb.v
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace17.smtc
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace17.yw
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 5..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 6..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 7..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 8..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 9..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 10..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 11..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 12..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 13..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 14..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 15..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 16..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 17..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 18..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 19..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 20..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 21..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 22..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 23..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 24..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 25..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 26..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 27..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 28..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 29..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 30..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 31..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 32..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 33..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 34..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 35..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 36..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 37..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 38..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 39..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 40..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 41..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 42..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 43..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 44..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 45..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 46..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 47..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 48..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 49..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 50..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 51..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 52..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 53..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 54..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 55..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 56..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 57..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 58..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 59..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 60..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 61..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 62..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Checking cover reachability in step 63..
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Unreached cover statement at counter: counter.sv:83.17-83.72 (_witness_.check_cover_counter_sv_83_74)
+SBY 14:52:03 [formal/counter] engine_0: ##   0:00:00  Status: failed
+SBY 14:52:03 [formal/counter] engine_0: finished (returncode=1)
+SBY 14:52:03 [formal/counter] engine_0: Status returned by engine: FAIL
+SBY 14:52:03 [formal/counter] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 14:52:03 [formal/counter] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 14:52:03 [formal/counter] summary: engine_0 (smtbmc) returned FAIL
+SBY 14:52:03 [formal/counter] summary: cover trace: formal/counter/engine_0/trace0.vcd
+SBY 14:52:03 [formal/counter] summary:   reached cover statement counter._witness_.check_cover_counter_sv_69_40 at counter.sv:69.17-69.49 step 2
+SBY 14:52:03 [formal/counter] summary: cover trace: formal/counter/engine_0/trace1.vcd
+SBY 14:52:03 [formal/counter] summary:   reached cover statement counter._witness_.check_cover_counter_sv_73_52 at counter.sv:73.17-73.50 step 2
+SBY 14:52:03 [formal/counter] summary: cover trace: formal/counter/engine_0/trace10.vcd
+SBY 14:52:03 [formal/counter] summary:   reached cover statement counter._witness_.check_cover_counter_sv_68_37 at counter.sv:68.17-68.49 step 2
+SBY 14:52:03 [formal/counter] summary: cover trace: formal/counter/engine_0/trace11.vcd
+SBY 14:52:03 [formal/counter] summary:   reached cover statement counter._witness_.check_cover_counter_sv_70_43 at counter.sv:70.17-70.49 step 2
+SBY 14:52:03 [formal/counter] summary: cover trace: formal/counter/engine_0/trace12.vcd
+SBY 14:52:03 [formal/counter] summary:   reached cover statement counter._witness_.check_cover_counter_sv_72_49 at counter.sv:72.17-72.50 step 2
+SBY 14:52:03 [formal/counter] summary: and 13 further traces
+SBY 14:52:03 [formal/counter] summary: unreached cover statements:
+SBY 14:52:03 [formal/counter] summary:   counter._witness_.check_cover_counter_sv_83_74 at counter.sv:83.17-83.72
+SBY 14:52:03 [formal/counter] summary: see formal/counter/FAIL for a complete summary
+SBY 14:52:03 [formal/counter] DONE (FAIL, rc=2)
 </system-out>
 <system-err>
 </system-err>
